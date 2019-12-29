@@ -40,6 +40,11 @@
           </h2>
         </div>
 
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modal-img">
+        </div>
+
         <div class="row">
           <div class="col-1-of-3">
             <div class="card">
@@ -61,9 +66,9 @@
                 </div>
                 <div class="card__side card__side--back card__side--back-1">
                   <div class="card__cta">
-                      <a href="#popup" class="btn btn--white">Demo</a>
-                      <a href="#popup" class="btn btn--white">Try Out!</a>
-                      <a href="#popup" class="btn btn--white">Source Code</a>
+                      <button id="ruby-runner-gif" class="btn btn--white">Demo</button>
+                      <a href="https://bmartinson5.github.io/ruby-runner/" class="btn btn--white">Try Out!</a>
+                      <a href="https://github.com/bmartinson5/ruby-runner" class="btn btn--white">Source Code</a>
                   </div>
                 </div>
             </div>
@@ -89,9 +94,9 @@
                 </div>
                 <div class="card__side card__side--back card__side--back-2">
                   <div class="card__cta">
-                      <a href="#popup" class="btn btn--white">Demo</a>
-                      <a href="#popup" class="btn btn--white">Try Out!</a>
-                      <a href="#popup" class="btn btn--white">Source Code</a>
+                      <button id="typing-test-gif" class="btn btn--white">Demo</button>
+                      <a href="http://bit.ly/typing-master" class="btn btn--white">Try Out!</a>
+                      <a href="https://github.com/bmartinson5/Typing-Test" class="btn btn--white">Source Code</a>
                   </div>
                 </div>
             </div>
@@ -118,8 +123,8 @@
                 <div class="card__side card__side--back card__side--back-3">
                   <div class="card__cta">
                       <a href="#popup" class="btn btn--white">Demo</a>
-                      <a href="#popup" class="btn btn--white">Try Out!</a>
-                      <a href="#popup" class="btn btn--white">Source Code</a>
+                      <a href="https://bmartinson5.github.io/TicTacToe-AI" class="btn btn--white">Try Out!</a>
+                      <a href="https://github.com/bmartinson5/TicTacToe-AI" class="btn btn--white">Source Code</a>
                   </div>
                 </div>
             </div>
@@ -134,22 +139,21 @@
                   &nbsp;
                 </div>
                 <h4 class="card__heading">
-                  Ruby Runner
+                  Beta Tracker
                 </h4>
                 <div class="card__details">
                     <ul>
-                        <li>Javascript</li>
                         <li>React.js</li>
-                        <li>Ruby</li>
-                        <li>Rails</li>
+                        <li>Node</li>
+                        <li>AWS Lambda</li>
+                        <li>AWS DynamoDb</li>
                     </ul>
                   </div>
                 </div>
                 <div class="card__side card__side--back card__side--back-1">
                   <div class="card__cta">
                       <a href="#popup" class="btn btn--white">Demo</a>
-                      <a href="#popup" class="btn btn--white">Try Out!</a>
-                      <a href="#popup" class="btn btn--white">Source Code</a>
+                      <h3>Source Code is Owned by Lightspeed Systems</h3>
                   </div>
                 </div>
             </div>
@@ -162,14 +166,13 @@
                   &nbsp;
                 </div>
                 <h4 class="card__heading">
-                  Typing Test
+                  Sudoku Solver
                 </h4>
                 <div class="card__details">
                     <ul>
                         <li>Javascript</li>
-                        <li>React.js</li>
-                        <li>Node.js</li>
-                        <li>MongoDb</li>
+                        <li>jQuery</li>
+                        <li>CSS</li>
                     </ul>
                   </div>
                 </div>
@@ -190,22 +193,21 @@
                   &nbsp;
                 </div>
                 <h4 class="card__heading">
-                  Unbeatable Tic-Tac-Toe
+                  Sudoku Solver
                 </h4>
                 <div class="card__details">
                     <ul>
                         <li>Javascript</li>
                         <li>jQuery</li>
                         <li>CSS</li>
-                        <li>HTML</li>
                     </ul>
                   </div>
                 </div>
                 <div class="card__side card__side--back card__side--back-3">
                   <div class="card__cta">
                       <a href="#popup" class="btn btn--white">Demo</a>
-                      <a href="#popup" class="btn btn--white">Try Out!</a>
-                      <a href="#popup" class="btn btn--white">Source Code</a>
+                      <a href="https://bmartinson5.github.io/sudoku-solver/" class="btn btn--white">Try Out!</a>
+                      <a href="https://github.com/bmartinson5/sudoku-solver" class="btn btn--white">Source Code</a>
                   </div>
                 </div>
             </div>
@@ -215,7 +217,26 @@
 
       </section>
     </main>
-    <!--
 
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      var modalImg = document.getElementById("modal-img");
+
+      function handleClick(gifName){
+        modal.style.display = "block";
+        modalImg.src = gifName;
+      }
+      
+      var RubyRunnerButton = document.getElementById("ruby-runner-gif");
+      RubyRunnerButton.onclick = () => handleClick('RubyRunnerCast.gif');
+      var TypingTestButton = document.getElementById("typing-test-gif");
+      TypingTestButton.onclick = () => handleClick('TypingTestCast.gif');
+      
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function() { 
+        modal.style.display = "none";
+      }
+      </script>
   </body>
 </html>
