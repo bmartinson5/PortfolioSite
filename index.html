@@ -16,8 +16,8 @@
   <body>
     <header class="header">
       <div class="navbar">
-        <span class="navbar-item">Projects</span>
-        <a href="./BenMartinson_Resume.pdf" class="navbar-item">Resume</a>
+        <a href="#projects-header" class="navbar-item">Projects</a>
+        <a href="./BenMartinson_Resume_Updated.pdf" class="navbar-item">Resume</a>
         <span class=""></span>
       </div>
       <div class="text-box">
@@ -35,7 +35,7 @@
     <main>
       <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">
+          <h2 class="heading-secondary" id="projects-header">
             Projects
           </h2>
         </div>
@@ -45,7 +45,7 @@
           <img class="modal-content" id="modal-img">
         </div>
 
-        <div class="row">
+        <div class="row" id="first-row">
           <div class="col-1-of-3">
             <div class="card">
               <div class="card__side card__side--front">
@@ -122,7 +122,7 @@
                 </div>
                 <div class="card__side card__side--back card__side--back-3">
                   <div class="card__cta">
-                      <a href="#popup" class="btn btn--white">Demo</a>
+                      <button id="tic-tac-gif" class="btn btn--white">Demo</button>
                       <a href="https://bmartinson5.github.io/TicTacToe-AI" class="btn btn--white">Try Out!</a>
                       <a href="https://github.com/bmartinson5/TicTacToe-AI" class="btn btn--white">Source Code</a>
                   </div>
@@ -152,8 +152,8 @@
                 </div>
                 <div class="card__side card__side--back card__side--back-1">
                   <div class="card__cta">
-                      <a href="#popup" class="btn btn--white">Demo</a>
-                      <h3>Source Code is Owned by Lightspeed Systems</h3>
+                      <button id="beta-tracker-gif" class="btn btn--white">Demo</button>
+                      <h3>Source Code Owned by Lightspeed Systems</h3>
                   </div>
                 </div>
             </div>
@@ -178,9 +178,9 @@
                 </div>
                 <div class="card__side card__side--back card__side--back-2">
                   <div class="card__cta">
-                      <a href="#popup" class="btn btn--white">Demo</a>
-                      <a href="#popup" class="btn btn--white">Try Out!</a>
-                      <a href="#popup" class="btn btn--white">Source Code</a>
+                      <button id="sudoku-solver-gif" class="btn btn--white">Demo</button>
+                      <a href="https://bmartinson5.github.io/sudoku-solver" class="btn btn--white">Try Out!</a>
+                      <a href="https://github.com/bmartinson5/sudoku-solver" class="btn btn--white">Source Code</a>
                   </div>
                 </div>
             </div>
@@ -193,21 +193,21 @@
                   &nbsp;
                 </div>
                 <h4 class="card__heading">
-                  Sudoku Solver
+                  Food Store
                 </h4>
                 <div class="card__details">
                     <ul>
-                        <li>Javascript</li>
-                        <li>jQuery</li>
-                        <li>CSS</li>
+                        <li>Ruby</li>
+                        <li>Rails</li>
+                        <li>eRuby (Embedded Ruby)</li>
+                        <li>MVC</li>
                     </ul>
                   </div>
                 </div>
                 <div class="card__side card__side--back card__side--back-3">
                   <div class="card__cta">
-                      <a href="#popup" class="btn btn--white">Demo</a>
-                      <a href="https://bmartinson5.github.io/sudoku-solver/" class="btn btn--white">Try Out!</a>
-                      <a href="https://github.com/bmartinson5/sudoku-solver" class="btn btn--white">Source Code</a>
+                      <button id="product-reviews-gif" class="btn btn--white">Demo</button>
+                      <a href="https://github.com/bmartinson5/product-reviews" class="btn btn--white">Source Code</a>
                   </div>
                 </div>
             </div>
@@ -232,6 +232,14 @@
       RubyRunnerButton.onclick = () => handleClick('RubyRunnerCast.gif');
       var TypingTestButton = document.getElementById("typing-test-gif");
       TypingTestButton.onclick = () => handleClick('TypingTestCast.gif');
+      var tictacButton = document.getElementById("tic-tac-gif");
+      tictacButton.onclick = () => handleClick('TicTacCast.gif');
+      var sudokuSolverButton = document.getElementById("sudoku-solver-gif");
+      sudokuSolverButton.onclick = () => handleClick('sudokuSolverCast.gif');
+      var betaTracker = document.getElementById("beta-tracker-gif");
+      betaTracker.onclick = () => handleClick('BetaTrackerCast.gif');
+      var productReviews = document.getElementById("product-reviews-gif");
+      productReviews.onclick = () => handleClick('ProductReviewsCast.gif');
       
       var span = document.getElementsByClassName("close")[0];
       span.onclick = function() { 
